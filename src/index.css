@@ -1,0 +1,10 @@
+.nav-item a {
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right:10px;
+}
+
+.nav-item a.active {
+  color:rgb(16, 30, 103)
+}
