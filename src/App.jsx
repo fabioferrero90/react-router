@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Contatti from "./pages/Contatti"
 import About from "./pages/About"
 import PostPage from "./pages/PostPage"
+import NewPost from "./pages/NewPost"
 
 function App() {
 
@@ -14,10 +15,10 @@ function App() {
       <Routes>
         <Route Component={DefaultLayout}>
           <Route path="/" Component={Home} />
+          <Route path="/newpost" Component={NewPost} />
           <Route path="/contatti" Component={Contatti} />
           <Route path="/about" Component={About} />
           <Route path="/:id" Component={PostPage} />
-
         </Route>
       </Routes>
     </BrowserRouter>

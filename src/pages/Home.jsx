@@ -38,7 +38,7 @@ function Home() {
       <div className="row">
         {posts && posts.map(post => (
           <div className="col-md-4 px-4" key={post.id}>
-            <div className="card mb-4 shadow-sm">
+            <div className="postscard card mb-4 shadow-sm d-flex flex-column justify-content-between">
               <img src={handleImageUrl(post.image)} className="card-img-top" alt={post.title} />
               <div className="card-body pb-4">
                 <h5 className="card-title">{post.title}</h5>

@@ -10,8 +10,6 @@
 }
 
 .post.card-body img{
-  width:100%;
-  height: 500px;
   object-fit: cover;
 }
 

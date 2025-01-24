@@ -32,7 +32,7 @@ function PostPage() {
   const deletePost = () => {
     axios.delete(`${baseUrl}/posts/${id}`)
       .then(() => {
-        navigate(-1)
+        navigate('/')
       })
   }
 
@@ -49,10 +49,14 @@ function PostPage() {
               <button className="btn btn-warning" onClick={() => navigate('/')}>Torna Indietro</button>
               <button className="btn btn-danger" onClick={deletePost}>Elimina Post</button>
             </div>
-            <img className="my-4" src={handleImageUrl(post.image)} alt={post.title} />
-            <h1 className="card-title">{post.title}</h1>
-            <p className="card-text">{post.content}</p>
-            <p className="card-text"><strong>Tag:</strong> {post.tags.join(',')}</p>
+            <div className="row my-4">
+              <img className="col-4" src={handleImageUrl(post.image)} alt={post.title} />
+              <div className="col-8">
+                <h1 className="card-title">{post.title}</h1>
+                <p className="card-text">{post.content}</p>
+                <p className="card-text"><strong>Tag:</strong> {post.tags.join(',')}</p>
+              </div>
+            </div>
             <div className="navbuttons-row d-flex justify-content-center">
               {prevId && <button className="btn btn-secondary" onClick={() => navigate(`/${prevId}`, { state: { postIds } })}>Precedente</button>}
               {nextId && <button className="btn btn-secondary" onClick={() => navigate(`/${nextId}`, { state: { postIds } })}>Successivo</button>}
