@@ -5,6 +5,7 @@ import DefaultLayout from "./layouts/DefaultLayout"
 import Home from "./pages/Home"
 import Contatti from "./pages/Contatti"
 import About from "./pages/About"
+import PostPage from "./pages/PostPage"
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
           <Route path="/" Component={Home} />
           <Route path="/contatti" Component={Contatti} />
           <Route path="/about" Component={About} />
+          <Route path="/:id" Component={PostPage} />
+
         </Route>
       </Routes>
     </BrowserRouter>
